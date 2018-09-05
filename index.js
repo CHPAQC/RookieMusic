@@ -149,7 +149,7 @@ var Fm = {
     },
     loadMusic(){
         var _this = this
-        $.getJSON('http://jirenguapi.applinzi.com/fm/getSong.php',{channel:this.channelId}).done(function(ret){
+        $.getJSON('https://jirenguapi.applinzi.com/fm/getSong.php',{channel:this.channelId}).done(function(ret){
             _this.song = ret['song'][0]
             _this.setMusic()
             _this.loadlyric()
@@ -158,7 +158,7 @@ var Fm = {
     },
     loadlyric(){
         var _this = this
-        $.getJSON('http://jirenguapi.applinzi.com/fm/getLyric.php',{sid:this.song.sid}).done(function(ret){
+        $.getJSON('https://jirenguapi.applinzi.com/fm/getLyric.php',{sid:this.song.sid}).done(function(ret){
             console.log(ret)
             var lyric = ret.lyric
             var lyricObj = {}
