@@ -209,12 +209,13 @@ var Fm = {
         this.audio.onended = function(){
             _this.loadMusic() 
         }
-        // console.log(this.lyricObj['0'+min+':'+second])
-        var line = this.lyricObj['0'+min+':'+second]
-        if(line){
-            this.$container.find('.lyric p').text(line).boomText()
-            
+        if(this.lyricObj){
+            var line = this.lyricObj['0'+min+':'+second]
+            if(line){
+                this.$container.find('.lyric p').text(line).boomText()
+            }
         }
+        // console.log(this.lyricObj['0'+min+':'+second])
     },
     music: function(){
         this.loadMusic()
